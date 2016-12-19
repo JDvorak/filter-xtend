@@ -1,17 +1,18 @@
 {
-  "name": "xtend",
-  "version": "4.0.1",
-  "description": "extend like a boss",
+  "name": "filter-xtend",
+  "version": "1.0.2",
+  "description": "extend like a boss, with filtering",
   "keywords": [
     "extend",
+    "filter",
     "merge",
     "options",
     "opts",
     "object",
     "array"
   ],
-  "author": "Raynos <raynos2@gmail.com>",
-  "repository": "git://github.com/Raynos/xtend.git",
+  "author": "John Dvorak <twelvetwo@gmail.com>",
+  "repository": "git://github.com/JDvorak/filter-xtend.git",
   "main": "immutable",
   "scripts": {
     "test": "node test"
@@ -20,8 +21,11 @@
   "devDependencies": {
     "tape": "~1.1.0"
   },
-  "homepage": "https://github.com/Raynos/xtend",
+  "homepage": "https://github.com/JDvorak/filter-xtend",
   "contributors": [
+    {
+      "name": "Raynos"
+    },
     {
       "name": "Jake Verbaten"
     },
@@ -30,25 +34,10 @@
     }
   ],
   "bugs": {
-    "url": "https://github.com/Raynos/xtend/issues",
-    "email": "raynos2@gmail.com"
+    "url": "https://github.com/JDvorak/filter-xtend/issues",
+    "email": "twelvetwo@gmail.com"
   },
   "license": "MIT",
-  "testling": {
-    "files": "test.js",
-    "browsers": [
-      "ie/7..latest",
-      "firefox/16..latest",
-      "firefox/nightly",
-      "chrome/22..latest",
-      "chrome/canary",
-      "opera/12..latest",
-      "opera/next",
-      "safari/5.1..latest",
-      "ipad/6.0..latest",
-      "iphone/6.0..latest"
-    ]
-  },
   "engines": {
     "node": ">=0.4"
   }

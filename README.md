@@ -1,32 +1,31 @@
-# xtend
-
-[![browser support][3]][4]
+# filter-xtend
 
 [![locked](http://badges.github.io/stability-badges/dist/locked.svg)](http://github.com/badges/stability-badges)
 
-Extend like a boss
+Extend like a boss, *with filters*
 
-xtend is a basic utility library which allows you to extend an object by appending all of the properties from each object in a list. When there are identical properties, the right-most property takes precedence.
+[xtend][xtend] is a basic utility library by [Raynos][raynos] which allows you to extend an object by appending all of the properties from each object in a list. When there are identical properties, the right-most property takes precedence.
+
+**But, this is xtend with filters!** Filter-xtend provides the same classic functionality with the ability to filter the individual keys. 
 
 ## Examples
 
 ```js
-var extend = require("xtend")
+var extend = require("filter-xtend")
 
 // extend returns a new object. Does not mutate arguments
 var combination = extend({
     a: "a",
-    b: 'c'
+    b: "c",
+    c: "nope"
 }, {
     b: "b"
-})
+}, (target, source, key) => {return key !== "c"})
 // { a: "a", b: "b" }
 ```
 
 ## Stability status: Locked
 
 ## MIT Licenced
-
-
-  [3]: http://ci.testling.com/Raynos/xtend.png
-  [4]: http://ci.testling.com/Raynos/xtend
+[xtend]: https://github.com/Raynos/xtend
+[Raynos]: https://github.com/Raynos

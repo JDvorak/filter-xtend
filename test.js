@@ -81,3 +81,30 @@ test("null prototype mutable", function (assert) {
     assert.equal(a.bar, "baz")
     assert.end()
 })
+
+test("filter merge", function(assert) {
+    var a = { a: "foo" }
+    var b = { b: "bar", c: "baz" }
+    
+    var filter = function (target, source, key) {
+        return key !== 'c'
+    }
+
+    assert.deepEqual(extend(a, b, filter), { a: "foo", b: "bar" })
+    assert.end()
+})
+
+test("filter merge mutable", function (assert) {
+    var a = { a: "foo" }
+    var b = { a: "baz", b: "bar" }
+
+    var filter = function (target, source, key) {
+        return key !== 'a'
+    }
+
+    mutableExtend(a, b, filter)
+
+    assert.equal(a.a, "foo")
+    assert.equal(b.b, "bar")
+    assert.end()
+})
