@@ -20,7 +20,7 @@ var combination = extend({
     c: "nope"
 }, {
     b: "b"
-}, (target, source, key) => {return key !== "c"})
+}, (target, source, key, index) => {return key !== "c"})
 // { a: "a", b: "b" }
 ```
 

@@ -16,7 +16,7 @@ function extend() {
         var source = arguments[i]
 
         for (var key in source) {
-            if (hasOwnProperty.call(source, key) && (!fn || fn(target, source, key))) {
+            if (hasOwnProperty.call(source, key) && (!fn || fn(target, source, key, i))) {
                 target[key] = source[key]
             }
         }
